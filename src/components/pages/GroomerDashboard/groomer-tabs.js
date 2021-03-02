@@ -86,9 +86,15 @@ const GroomerTab = () => {
               <i className="fas fa-paw"></i> Appointments
             </span>
           }
-          key="3"
+          key="4"
         >
-          Appointments
+          <h2>Send SMS to Customer</h2>
+          <label>
+            To<input></input>
+          </label>
+          <label>
+            Body<input></input>
+          </label>
         </TabPane>
       </Tabs>
     </div>
