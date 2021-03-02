@@ -86,7 +86,7 @@ const GroomerTab = () => {
               <i className="fas fa-paw"></i> Appointments
             </span>
           }
-          key="4"
+          key="3"
         >
           <h2>Send SMS to Customer</h2>
           <label>
