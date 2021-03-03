@@ -322,9 +322,13 @@ const Spacing = styled.div`
 `;
 
 const Caption = styled.div`
+  width: 60%;
   margin: 15px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 20%;
+  margin-right: 0 auto;
+  color: #1ea7fd;
+  font-weight: 900;
+  text-align: center;
 `;
 
 const Poodle = styled.img`
