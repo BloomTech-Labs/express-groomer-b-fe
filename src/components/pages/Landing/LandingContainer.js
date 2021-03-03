@@ -100,15 +100,19 @@ const IntroImage1 = styled.img`
   border-radius: 50%;
   width: 75%;
   height: auto;
+  border:2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
 `;
 
 const IntroImage2 = styled.img`
   position: absolute;
   left: 10px;
-  top: 250px;
+  top: 200px;
   border-radius: 50%;
   width: 40%;
   height: auto;
+  border:2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
 `;
 
 const Section = styled.div`
