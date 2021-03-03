@@ -198,7 +198,7 @@ const Blue = styled.span`
 
 const SpacedDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   margin-top: 50px;
@@ -326,9 +326,10 @@ const Caption = styled.div`
   margin: 15px;
   margin-left: 20%;
   margin-right: 0 auto;
-  color: #1ea7fd;
-  font-weight: 900;
+  color: gray;
+  font-weight: 500;
   text-align: center;
+  font-style: italic;
 `;
 
 const Poodle = styled.img`
