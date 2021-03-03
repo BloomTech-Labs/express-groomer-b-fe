@@ -116,7 +116,7 @@ const Section = styled.div`
   border: none;
   width: 85%;
   margin-top: 15px;
-  height: 650px;
+  height: 100%;
   margin-bottom: 15px;
   @media screen and (max-width: 450px) {
     width: 90%;
