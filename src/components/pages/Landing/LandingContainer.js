@@ -8,6 +8,7 @@ const Container = styled.div`
   font-size: 1rem;
   margin-top: 50px;
   margin-bottom: 50px;
+  height: 100%;
 `;
 
 const Title = styled.div`
@@ -35,7 +36,7 @@ const SecondTitle = styled.div`
 
 const SectionOne = styled.div`
   width: 50%;
-  height: 414px;
+  height: 650px;
   padding: 20px;
   margin-top: 10px;
   display: flex;
@@ -65,7 +66,7 @@ const SectionTwo = styled.div`
 
 const SectionThree = styled.div`
   width: 50%;
-  height: 414px;
+  height: 100%;
   padding: 20px;
   margin-top: 10px;
   display: flex;
@@ -94,10 +95,10 @@ const SectionFour = styled.div`
 
 const IntroImage1 = styled.img`
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 10px;
   border-radius: 50%;
-  width: 85%;
+  width: 75%;
   height: auto;
 `;
 
@@ -366,14 +367,12 @@ const LandingContainer = () => {
           </Title>
           <CenterDiv>
             <SectionOne>
-              <div>Grooming on your Schedule</div>
               <SecondTitle>Get Clean, Faster</SecondTitle>
               <MediumPara>
                 With Express Groomer you are your own boss. Whether you're a pet
                 owner looking for a squeaky clean pet or a Groomer looking to
                 add more clients to your business. Your Schedule: Your Rules.
               </MediumPara>
-              <div>Changing the way you Groom.</div>
               <SpacedDiv>
                 What are you waiting for? Create an Account Now:{' '}
                 <Button>Sign Up</Button>
