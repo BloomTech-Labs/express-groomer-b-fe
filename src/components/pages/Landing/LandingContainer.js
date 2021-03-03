@@ -55,9 +55,7 @@ const SectionOne = styled.div`
 
 const SectionTwo = styled.div`
   width: 50%;
-  height: 520px;
-  padding: 20px;
-  margin-top: 10px;
+  height: 500px;
   position: relative;
   @media screen and (max-width: 450px) {
     display: none;
@@ -169,6 +167,7 @@ const CenterDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;
 const MediumPara = styled.div`
   font-size: 1.25rem;
