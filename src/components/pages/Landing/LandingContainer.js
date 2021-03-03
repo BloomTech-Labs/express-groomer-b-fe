@@ -473,17 +473,16 @@ const LandingContainer = () => {
                     you
                   </li>
                 </ul>
+                <br></br>
                 <p>
                   Becoming a Groomer with Express Groomer is Easy! Just upload a
                   copy of your Groomer's License and ID and one of our
                   representitives will reach out for a brief chat.
                 </p>
-                <p>Earn a $500 bonus after your first 100 appointments</p>
               </GroomerText>
               <SpacedDiv>
                 <MediumPara>
-                  Interested in Grooming but don't have experience? You may be
-                  eligible for our <Blue>New Trainee Program</Blue>
+                  <Blue>Earn a $500 bonus after your first 100 appointments</Blue>
                 </MediumPara>
               </SpacedDiv>
             </SectionFour>
