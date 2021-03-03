@@ -1,20 +1,22 @@
 import React from 'react';
+import './TwilioForm.scss';
+import { Container, Form, Button } from 'react-bootstrap';
 
 export default function TwilioForm() {
   return (
-    <div className="container">
+    <Container>
       <h2>Send SMS To Customer</h2>
-      <form>
-        <div>
-          <label>To:</label>
+      <form className="sms-form">
+        <Form.Group>
+          <Form.Label>To:</Form.Label>
           <input />
-        </div>
-        <div>
-          <label>Body:</label>
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Body:</Form.Label>
           <textarea />
-        </div>
-        <button>Send Message</button>
+        </Form.Group>
+        <Button>Send Message</Button>
       </form>
-    </div>
+    </Container>
   );
 }
