@@ -70,6 +70,7 @@ const AppointmentCalendar = ({ msg }) => {
 };
 
 export default AppointmentCalendar;
+
 // .events {
 //   margin: 0;
 //   padding: 0;
