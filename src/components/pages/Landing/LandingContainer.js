@@ -175,17 +175,17 @@ const MediumPara = styled.div`
     margin-bottom: 20px;
   }
 `;
-const Button = styled.button`
-  color: white;
-  background-color: #1ea7fd;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
-  width: 170px;
-  outline: none;
-`;
+//const Button = styled.button`
+//color: white;
+//background-color: #1ea7fd;
+//border: none;
+//border-radius: 10px;
+//padding: 10px;
+//padding-top: 7.5px;
+//padding-bottom: 7.5px;
+//width: 170px;
+//outline: none;
+//`;
 
 const Blue = styled.span`
   color: #1ea7fd;
@@ -374,10 +374,6 @@ const LandingContainer = () => {
                 add more clients to your business. Your Schedule: Your Rules.
               </MediumPara>
               <div>Changing the way you Groom.</div>
-              <SpacedDiv>
-                What are you waiting for? Create an Account Now:{' '}
-                <Button>Sign Up</Button>
-              </SpacedDiv>
             </SectionOne>
             <SectionTwo>
               <IntroImage1

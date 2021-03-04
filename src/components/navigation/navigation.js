@@ -141,6 +141,9 @@ function NavBar() {
           <Link className="anchor" to="/login">
             Login
           </Link>
+          <Button type="primary" className={'anchor'}>
+            Create Account
+          </Button>
         </div>
       </div>
     );
