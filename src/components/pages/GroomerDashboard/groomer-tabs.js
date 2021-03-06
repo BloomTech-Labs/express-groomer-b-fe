@@ -3,6 +3,7 @@ import { Alert, Col, Form, Row, Tabs } from 'antd';
 import Overview from './overview';
 import GroomerProfilePage from '../GroomerProfile/GroomerProfilePage';
 import RenderFormGR from '../ProfileFormGR/RenderFormGR';
+import TwilioForm from './TwilioForm';
 import './groomer-dash.scss';
 // context imports
 import { FormContext } from '../../../state/contexts/FormContext';
@@ -88,13 +89,7 @@ const GroomerTab = () => {
           }
           key="3"
         >
-          <h2>Send SMS to Customer</h2>
-          <label>
-            To<input></input>
-          </label>
-          <label>
-            Body<input></input>
-          </label>
+          <TwilioForm />
         </TabPane>
       </Tabs>
     </div>
