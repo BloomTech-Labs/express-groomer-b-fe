@@ -8,6 +8,7 @@ const Container = styled.div`
   font-size: 1rem;
   margin-top: 50px;
   margin-bottom: 50px;
+  height: 100%;
 `;
 
 const Title = styled.div`
@@ -35,7 +36,7 @@ const SecondTitle = styled.div`
 
 const SectionOne = styled.div`
   width: 50%;
-  height: 414px;
+  height: 650px;
   padding: 20px;
   margin-top: 10px;
   display: flex;
@@ -54,9 +55,7 @@ const SectionOne = styled.div`
 
 const SectionTwo = styled.div`
   width: 50%;
-  height: 520px;
-  padding: 20px;
-  margin-top: 10px;
+  height: 500px;
   position: relative;
   @media screen and (max-width: 450px) {
     display: none;
@@ -65,7 +64,7 @@ const SectionTwo = styled.div`
 
 const SectionThree = styled.div`
   width: 50%;
-  height: 414px;
+  height: 100%;
   padding: 20px;
   margin-top: 10px;
   display: flex;
@@ -94,20 +93,24 @@ const SectionFour = styled.div`
 
 const IntroImage1 = styled.img`
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 10px;
   border-radius: 50%;
-  width: 85%;
+  width: 75%;
   height: auto;
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
 `;
 
 const IntroImage2 = styled.img`
   position: absolute;
   left: 10px;
-  top: 250px;
+  top: 200px;
   border-radius: 50%;
   width: 40%;
   height: auto;
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
 `;
 
 const Section = styled.div`
@@ -116,7 +119,7 @@ const Section = styled.div`
   border: none;
   width: 85%;
   margin-top: 15px;
-  height: 650px;
+  height: 100%;
   margin-bottom: 15px;
   @media screen and (max-width: 450px) {
     width: 90%;
@@ -164,6 +167,7 @@ const CenterDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;
 const MediumPara = styled.div`
   font-size: 1.25rem;
@@ -194,7 +198,7 @@ const Blue = styled.span`
 
 const SpacedDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   margin-top: 50px;
@@ -318,9 +322,14 @@ const Spacing = styled.div`
 `;
 
 const Caption = styled.div`
+  width: 60%;
   margin: 15px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 20%;
+  margin-right: 0 auto;
+  color: gray;
+  font-weight: 500;
+  text-align: center;
+  font-style: italic;
 `;
 
 const Poodle = styled.img`
@@ -366,7 +375,6 @@ const LandingContainer = () => {
           </Title>
           <CenterDiv>
             <SectionOne>
-              <div>Grooming on your Schedule</div>
               <SecondTitle>Get Clean, Faster</SecondTitle>
               <MediumPara>
                 With Express Groomer you are your own boss. Whether you're a pet
@@ -463,17 +471,18 @@ const LandingContainer = () => {
                     you
                   </li>
                 </ul>
+                <br></br>
                 <p>
                   Becoming a Groomer with Express Groomer is Easy! Just upload a
                   copy of your Groomer's License and ID and one of our
                   representitives will reach out for a brief chat.
                 </p>
-                <p>Earn a $500 bonus after your first 100 appointments</p>
               </GroomerText>
               <SpacedDiv>
                 <MediumPara>
-                  Interested in Grooming but don't have experience? You may be
-                  eligible for our <Blue>New Trainee Program</Blue>
+                  <Blue>
+                    Earn a $500 bonus after your first 100 appointments
+                  </Blue>
                 </MediumPara>
               </SpacedDiv>
             </SectionFour>
