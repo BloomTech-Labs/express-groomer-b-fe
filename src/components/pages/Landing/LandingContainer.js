@@ -191,10 +191,10 @@ const MediumPara = styled.div`
 //outline: none;
 //`;
 
-const Blue = styled.span`
-  color: #1ea7fd;
-  font-weight: 900;
-`;
+// const Blue = styled.span`
+//   color: #1ea7fd;
+//   font-weight: 900;
+// `;
 
 const SpacedDiv = styled.div`
   display: flex;
@@ -479,11 +479,12 @@ const LandingContainer = () => {
                 </p>
               </GroomerText>
               <SpacedDiv>
-                <MediumPara>
+                {/* This is a future feature */}
+                {/* <MediumPara>
                   <Blue>
                     Earn a $500 bonus after your first 100 appointments
                   </Blue>
-                </MediumPara>
+                </MediumPara> */}
               </SpacedDiv>
             </SectionFour>
           </CenterDiv>
