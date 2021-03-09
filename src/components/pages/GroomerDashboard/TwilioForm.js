@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './TwilioForm.scss';
+import { GroomersContext } from '../../../state/contexts/GroomersContext';
+import { FormContext } from '../../../state/contexts/FormContext';
 import { Container, Form, Button } from 'react-bootstrap';
 
 export default function TwilioForm() {
+  const { twilioGroomer, setTwilioGroomer } = useContext(GroomersContext);
+  const {
+    twilioSubmit,
+    setTwilioSubmit,
+    twilioError,
+    setTwilioError,
+  } = useContext(FormContext);
   return (
     <Container>
       <h2>Send SMS To Customer</h2>
