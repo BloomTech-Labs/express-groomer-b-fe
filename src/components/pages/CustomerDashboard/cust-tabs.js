@@ -52,8 +52,7 @@ const CustTab = () => {
         <TabPane
           tab={
             <span>
-              <i className="fas fa-paw"></i>
-              My Info
+              <i className="fas fa-paw"></i> My Info
             </span>
           }
           key="1"
@@ -82,12 +81,12 @@ const CustTab = () => {
           key="2"
         >
           {/* Pet form is placed inside a row component for easy center
-             alignment*/}
+          alignment*/}
           <Row justify={'center'}>
             <PetForm />
           </Row>
           {/* These 2 components will eventually live on pet display
-           component*/}
+          component*/}
           <Row justify={'center'}>
             <h2 style={{ marginTop: '10px' }}>Upload Pet Image</h2>
           </Row>

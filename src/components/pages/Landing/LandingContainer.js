@@ -191,21 +191,6 @@ const MediumPara = styled.div`
 //outline: none;
 //`;
 
-// const Blue = styled.span`
-//   color: #1ea7fd;
-//   font-weight: 900;
-// `;
-
-const SpacedDiv = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  margin-top: 50px;
-  @media screen and (max-width: 450px) {
-    margin-top: 20px;
-  }
-`;
 const BlueExpress = styled.span`
   font-family: 'Leckerli One', cursive;
   color: #1ea7fd;
@@ -478,14 +463,6 @@ const LandingContainer = () => {
                   representitives will reach out for a brief chat.
                 </p>
               </GroomerText>
-              <SpacedDiv>
-                {/* This is a future feature */}
-                {/* <MediumPara>
-                  <Blue>
-                    Earn a $500 bonus after your first 100 appointments
-                  </Blue>
-                </MediumPara> */}
-              </SpacedDiv>
             </SectionFour>
           </CenterDiv>
         </Section>
