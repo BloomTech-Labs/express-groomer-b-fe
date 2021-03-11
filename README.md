@@ -14,9 +14,9 @@ You can find the [`Deployed Project`](https://b.expressgroomer.dev) located [her
 ### **Resources**
 </br>
 
-**[Labs PT14 Trello Board](https://trello.com/b/TjEIzVvG/labspt14-express-groomer-b)**: All known `bugs` are currently documented on this Trello board (among other items).
+**[Labs PT16 Trello Board](https://trello.com/b/ANt20HnE/labs-pt16-express-groomer-qwelian)**: All known `bugs` are currently documented on this Trello board (among other items).
 
-**[Labs PT14 Product Roadmap](https://www.notion.so/Express-Groomer-Build-On-171e358c0a2f49019572d0afa7ff5ba0)**: This Roadmap is discussed in detail under 'Features' below.
+**[Labs PT16 Product Roadmap](https://www.notion.so/Express-Groomer-Build-On-9d3d87e4eded454e84270742f0e5a4fc)**: This Roadmap is discussed in detail under 'Features' below.
 
 **[Onboarding Video/Demo](https://www.youtube.com/watch?v=Z3cMgTNvtLc&feature=youtu.be):**  This `very useful` video was created by the Labs PT14 team to introduce the next labs teams working on this project to the current state of the project and various quirks and items of note.
 
@@ -138,13 +138,27 @@ This part of the roadmap includes several 'features'
 - Ant Design
 - Axios
 - MapBox via [react-map-gl](https://visgl.github.io/react-map-gl/)
-- Calendly via [react-calendly](https://www.npmjs.com/package/react-calendly)
+- Twilio API for [SMS notifications](https://www.twilio.com/sms)
 - Styled Components
 - Less (Installed with AntDesign)
 - Front end deployed to [`AWS Amplify`](https://b.expressgroomer.dev)
 - Sass
 
 <br>
+
+## Getting Started
+<br>
+
+For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
+
+<br>
+## **Setup the application**
+
+- create your project repo by forking and cloning or using this as a template.
+- run: `npm install` to download all dependencies.
+- confirm correct env variables in your `.env` file.
+- run: `npm start` to start the app on your local machine (it may take a few moments to open).
+
 
 ## **Authentication API**
 
