@@ -23,6 +23,8 @@ const APIProvider = ({ children }) => {
     setAllGroomers,
     setServices,
     service,
+    twilioGroomer,
+    setTwilioGroomer,
   } = useContext(GroomersContext);
   const {
     setIsEditing,
@@ -31,6 +33,8 @@ const APIProvider = ({ children }) => {
     setShowDelModal,
     setIsError,
     setResultInfo,
+    setTwilioSubmit,
+    setTwilioError,
   } = useContext(FormContext);
 
   // we will define a bunch of API calls here.
@@ -314,6 +318,38 @@ const APIProvider = ({ children }) => {
       });
   };
 
+  /******************************************************************************
+   *                      API POST calls for twilioForm Component
+   ******************************************************************************/
+
+  const onSubmit = () => {
+    axios
+      .post('http://localhost:4000/groomers/messages', twilioGroomer)
+      .then(res => {
+        const data = res.data;
+        console.log('Response for TwilioForm is: ', data);
+        console.log(res);
+        setTwilioGroomer({
+          to: '',
+          body: '',
+        });
+        setTwilioSubmit(true);
+        setTwilioError(false);
+
+        setTwilioGroomer(data);
+      })
+      .catch(err => {
+        setTwilioGroomer({
+          to: '',
+          body: '',
+        });
+        setTwilioError(true);
+        setTwilioSubmit(false);
+
+        console.log('this is an error', err);
+      });
+  };
+
   return (
     <APIContext.Provider
       value={{
@@ -335,6 +371,7 @@ const APIProvider = ({ children }) => {
         addNewPet,
         getServices,
         getLatLng,
+        onSubmit,
       }}
     >
       {children}
