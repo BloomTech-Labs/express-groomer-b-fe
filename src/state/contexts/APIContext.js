@@ -156,8 +156,8 @@ const APIProvider = ({ children }) => {
     const headers = getAuthHeader(authState);
 
     return axios
-      .get(`${process.env.REACT_APP_API_URI}/customers/${userInfo.sub}`, {
-        headers,
+      .get(`${process.env.REACT_APP_API_URI}/customers/`, {
+        headers, // removed ${userInfo.sub} to display customer-dashboard
       })
       .then(res => {
         if (res.data) {
