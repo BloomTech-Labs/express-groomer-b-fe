@@ -324,7 +324,7 @@ const APIProvider = ({ children }) => {
 
   const onSubmit = () => {
     axios
-      .post('http://localhost:4000/groomers/messages', twilioGroomer)
+      .post(`http://localhost:8000/groomers/messages`, twilioGroomer)
       .then(res => {
         const data = res.data;
         console.log('Response for TwilioForm is: ', data);
@@ -346,7 +346,7 @@ const APIProvider = ({ children }) => {
         setTwilioError(true);
         setTwilioSubmit(false);
 
-        console.log('this is an error', err);
+        console.log('Error for TwilioForm is:', err);
       });
   };
 
