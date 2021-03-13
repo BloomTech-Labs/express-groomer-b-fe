@@ -18,10 +18,12 @@ const GroomersProvider = ({ children }) => {
 
   // context state for TwilioForm Component
   const twilioState = {
-    to: "",
-    body: "",
+    to: '',
+    body: '',
   };
   const [twilioGroomer, setTwilioGroomer] = useState(twilioState);
+  // form validation state for TwilioForm Comopnent
+  const [validateForm, setValidateForm] = useState(twilioState);
 
   // context state
   const { userInfo } = useContext(UsersContext);
@@ -192,6 +194,8 @@ const GroomersProvider = ({ children }) => {
         deleteGroomerProfile,
         twilioGroomer,
         setTwilioGroomer,
+        validateForm,
+        setValidateForm,
       }}
     >
       {children}

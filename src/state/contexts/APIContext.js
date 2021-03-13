@@ -323,8 +323,8 @@ const APIProvider = ({ children }) => {
    ******************************************************************************/
 
   const onSubmit = () => {
-    axios
-      .post(`http://localhost:8000/groomers/messages`, twilioGroomer)
+    return axios
+      .post(`${process.env.REACT_APP_API_URI}/groomers/messages`, twilioGroomer)
       .then(res => {
         const data = res.data;
         console.log('Response for TwilioForm is: ', data);
