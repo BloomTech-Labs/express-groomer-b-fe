@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 /******************************************************************************
- *                      Navigation Page Styles
+ *                      Navigation Styles
  ******************************************************************************/
 
 export const Button = styled.button`
@@ -24,6 +24,8 @@ export const Button = styled.button`
  *                      Landing Page Styles
  ******************************************************************************/
 
+// ------------- Main ------------- //
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -31,7 +33,7 @@ export const Container = styled.div`
   font-size: 1rem;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 80%;
+  width: 100%;
   height: 100%;
 `;
 
@@ -59,87 +61,6 @@ export const SecondTitle = styled.div`
   }
 `;
 
-export const SectionOne = styled.div`
-  background-color: lightgray;
-  width: 50%;
-  height: 650px;
-  padding: 20px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  @media screen and (max-width: 450px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin: 10px;
-    padding: 10px;
-  }
-`;
-
-export const SectionTwo = styled.div`
-  background-color: lightgray;
-  width: 50%;
-  height: 500px;
-  position: relative;
-  @media screen and (max-width: 450px) {
-    display: none;
-  }
-`;
-
-export const SectionThree = styled.div`
-  width: 50%;
-  height: 100%;
-  padding: 20px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  @media screen and (max-width: 450px) {
-    display: none;
-  }
-`;
-
-export const SectionFour = styled.div`
-  width: 50%;
-  height: 520px;
-  padding: 20px;
-  margin-top: 10px;
-  @media screen and (max-width: 450px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-    margin: 0px;
-    padding: 0px;
-    font-size: 1rem;
-  }
-`;
-
-export const IntroImage1 = styled.img`
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  border-radius: 50%;
-  width: 75%;
-  height: auto;
-  border: 2px solid #fff;
-  box-shadow: 0px 10px 6px #ccc;
-`;
-
-export const IntroImage2 = styled.img`
-  position: absolute;
-  left: 10px;
-  top: 200px;
-  border-radius: 50%;
-  width: 40%;
-  height: auto;
-  border: 2px solid #fff;
-  box-shadow: 0px 10px 6px #ccc;
-`;
-
 export const Section = styled.div`
   background-color: white;
   border-radius: 10px;
@@ -153,6 +74,24 @@ export const Section = styled.div`
     margin-top: -10px;
     margin-bottom: -10px;
     height: 550px;
+  }
+`;
+
+export const CenterDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+
+export const MediumPara = styled.div`
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -190,20 +129,25 @@ export const HiddenRow = styled.div`
   }
 `;
 
-export const CenterDiv = styled.div`
+// ------------- Section One ------------- //
+
+export const SectionOne = styled.div`
+  background-color: lightgray;
+  width: 50%;
+  height: 650px;
+  padding: 20px;
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
-export const MediumPara = styled.div`
-  font-size: 1.25rem;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  margin-right: 30px;
   @media screen and (max-width: 450px) {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
   }
 `;
 
@@ -217,87 +161,70 @@ export const BlueExpress = styled.span`
   }
 `;
 
-export const Footer = styled.footer`
-  border-top: 10px solid #1ea7fd;
-  background-color: #15699e;
-  height: 265px;
-  display: flex;
-  justify-content: space-around;
+export const IntroImage1 = styled.img`
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border-radius: 50%;
+  width: 75%;
+  height: auto;
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
+`;
+
+export const IntroImage2 = styled.img`
+  position: absolute;
+  left: 10px;
+  top: 200px;
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 6px #ccc;
+`;
+
+// ------------- Section Two ------------- //
+
+export const SectionTwo = styled.div`
+  background-color: lightgray;
+  width: 50%;
+  height: 500px;
   position: relative;
   @media screen and (max-width: 450px) {
-    font-size: 1rem;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    display: none;
+  }
+`;
+
+// ------------- Section Three ------------- //
+
+export const SectionThree = styled.div`
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+`;
+
+// ------------- Section Four ------------- //
+
+export const SectionFour = styled.div`
+  width: 50%;
+  height: 520px;
+  padding: 20px;
+  margin-top: 10px;
+  @media screen and (max-width: 450px) {
     display: flex;
     justify-content: center;
-  }
-`;
-
-export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 450px) {
-    position: absolute;
-    top: 5px;
-    margin-bottom: 10px;
-  }
-`;
-
-export const SocialContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  color: white;
-  font-size: 2rem;
-  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
     font-size: 1rem;
-  }
-`;
-
-export const Logo = styled.div`
-  color: white;
-  font-size: 4em;
-  padding: 0.25em;
-  border-radius: 10px;
-  font-family: 'Leckerli One', cursive;
-  @media screen and (max-width: 450px) {
-    font-size: 1.5rem;
-  }
-`;
-
-export const FooterTitles = styled.span`
-  margin-top: 30px;
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: white;
-  @media screen and (max-width: 450px) {
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-`;
-
-export const FooterSect = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: 1.1rem;
-  @media screen and (max-width: 450px) {
-    font-size: 1rem;
-    margin-top: 20px;
-    width: 120px;
-    padding-top: 50px;
-  }
-`;
-
-export const Copyright = styled.div`
-  font-size: 0.5 rem;
-  display: flex;
-  flex-direction: column-reverse row-reverse;
-  color: white;
-  position: absolute;
-  top: 200px;
-  @media screen and (max-width: 450px) {
-    padding-top: 20px;
-    font-size: 0.75rem;
   }
 `;
 
@@ -343,7 +270,7 @@ export const Poodle = styled.img`
 export const SpacingLeft = styled.div`
   margin: 25px;
   margin-bottom: 10px;
-  color: #1ea7fd;
+  color: #e8833a;
   font-weight: 900;
   font-size: 2rem;
   display: flex;
@@ -356,7 +283,7 @@ export const SpacingLeft = styled.div`
 
 export const SpacingRight = styled.div`
   margin: 25px;
-  color: #1ea7fd;
+  color: #e8833a;
   font-weight: 900;
   font-size: 2rem;
   display: flex;
@@ -364,5 +291,91 @@ export const SpacingRight = styled.div`
   @media screen and (max-width: 450px) {
     font-size: 1.25rem;
     margin-bottom: 30px;
+  }
+`;
+
+// ------------- Footer ------------- //
+
+export const Footer = styled.footer`
+  border-top: 10px solid #f3c19d;
+  background-color: #e8833a;
+  height: 265px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const FooterSect = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.1rem;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+    margin-top: 20px;
+    width: 120px;
+    padding-top: 50px;
+  }
+`;
+
+export const FooterTitles = styled.span`
+  margin-top: 30px;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: white;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 450px) {
+    position: absolute;
+    top: 5px;
+    margin-bottom: 10px;
+  }
+`;
+
+export const SocialContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 2rem;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
+`;
+
+export const Logo = styled.div`
+  color: white;
+  font-size: 4em;
+  padding: 0.25em;
+  border-radius: 10px;
+  font-family: 'Leckerli One', cursive;
+  @media screen and (max-width: 450px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const Copyright = styled.div`
+  font-size: 0.5 rem;
+  display: flex;
+  flex-direction: column-reverse row-reverse;
+  color: black;
+  position: absolute;
+  top: 200px;
+  @media screen and (max-width: 450px) {
+    padding-top: 20px;
+    font-size: 0.75rem;
   }
 `;
