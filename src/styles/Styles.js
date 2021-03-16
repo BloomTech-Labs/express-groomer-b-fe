@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 
 /******************************************************************************
+ *                      Navigation Page Styles
+ ******************************************************************************/
+
+export const Button = styled.button`
+  background-color: white;
+  color: #1ea7fd;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  width: 170px;
+
+  :hover {
+    background-color: #1ea7fd;
+    color: white;
+  }
+`;
+
+/******************************************************************************
  *                      Landing Page Styles
  ******************************************************************************/
 
@@ -11,6 +31,7 @@ export const Container = styled.div`
   font-size: 1rem;
   margin-top: 50px;
   margin-bottom: 50px;
+  width: 80%;
   height: 100%;
 `;
 
@@ -18,6 +39,7 @@ export const Title = styled.div`
   font-size: 4.25rem;
   display: flex;
   justify-content: center;
+  // Fancy font
   font-family: 'Poppins', sans-serif;
   @media screen and (max-width: 450px) {
     font-size: 2.75rem;
@@ -38,6 +60,7 @@ export const SecondTitle = styled.div`
 `;
 
 export const SectionOne = styled.div`
+  background-color: lightgray;
   width: 50%;
   height: 650px;
   padding: 20px;
@@ -57,6 +80,7 @@ export const SectionOne = styled.div`
 `;
 
 export const SectionTwo = styled.div`
+  background-color: lightgray;
   width: 50%;
   height: 500px;
   position: relative;

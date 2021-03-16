@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
 
 .nav-bar {
@@ -9,10 +10,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 2rem;
-  margin-left: 3%;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  height: 1.25rem;
+  margin-left: 35%;
+  font-size: 1.5rem;
   font-family: 'Source Sans Pro', sans-serif;
   @media screen and (max-width: 450px) {
     font-size: 1.2rem;
@@ -21,33 +21,29 @@
 
   a {
     width: 160px;
-    margin-right: 6%;
+    margin-right: 3%;
     text-align: center;
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
+    color:  rgb(95, 95, 95);
   }
 
   a:hover {
-    background-color: #1ea7fd;
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
+    color: rgb(12, 12, 12);
+    text-decoration: underline;
+    transition-duration: 200ms;
     position: relative;
   }
 }
+
+
 
 .App-Nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 151px;
-  background-color: #ffffff;
-  border-bottom: 10px solid #1ea7fd;
-  border-top: 10px solid #1ea7fd;
-
+  height: 100px;
+  background-color: #F3C19D;
+  border-bottom: 10px solid #f8a66c;
 
   .img-container {
     display: flex;
@@ -56,12 +52,12 @@
   }
 
   .express-logo {
-    color: #ffffff;
-    background-color: #1ea7fd;
+    background-color:#E8833A;
+    color: white;
+    padding: 15px;
     font-size: 3.5em;
-    padding: .25em;
-    border-radius: 10px;
-    font-family: 'Leckerli One', sans-serif;
+    margin-left: 75px;
+    font-family: 'Comfortaa', sans-serif;
     @media screen and (max-width: 450px) {
       font-size: 2rem;
       width: 80%;
