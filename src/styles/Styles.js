@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import img from '../components/pages/Landing/images/dog_bed.jpg';
 
 /******************************************************************************
  *                      Navigation Styles
@@ -24,7 +25,7 @@ export const Button = styled.button`
  *                      Landing Page Styles
  ******************************************************************************/
 
-// ------------- Main ------------- //
+// --------------------- Main --------------------- //
 
 export const Container = styled.div`
   display: flex;
@@ -53,6 +54,7 @@ export const Title = styled.div`
 export const SecondTitle = styled.div`
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
+  color: #e8833a;
   @media screen and (max-width: 450px) {
     font-size: 1.25rem;
     margin: 5px;
@@ -62,7 +64,6 @@ export const SecondTitle = styled.div`
 `;
 
 export const Section = styled.div`
-  background-color: white;
   border-radius: 10px;
   border: none;
   width: 85%;
@@ -129,17 +130,84 @@ export const HiddenRow = styled.div`
   }
 `;
 
-// ------------- Section One ------------- //
+export const DiagramIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+`;
+
+export const OrangeIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #f3c19d;
+  font-size: 4rem;
+  margin: 40px;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
+`;
+
+export const GrayIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: gray;
+  font-size: 4rem;
+  margin: 40px;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
+`;
+
+// --------------------- Section One --------------------- //
+
+export const IntroContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: gray;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const IntroSecondTitle = styled.div`
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  @media screen and (max-width: 450px) {
+    font-size: 1.25rem;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+`;
+
+export const IntroMediumPara = styled.div`
+  font-size: 1.25rem;
+  margin: 40px 60px 40px 60px;
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+`;
 
 export const SectionOne = styled.div`
   background-color: lightgray;
+  border-radius: 40px;
+  opacity: 95%;
   width: 50%;
-  height: 650px;
+  height: 100%;
   padding: 20px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
+  text-align: center;
   @media screen and (max-width: 450px) {
     display: flex;
     justify-content: center;
@@ -151,39 +219,17 @@ export const SectionOne = styled.div`
   }
 `;
 
-export const BlueExpress = styled.span`
-  font-family: 'Leckerli One', cursive;
-  color: #1ea7fd;
-  margin-left: 5px;
-  margin-right: 5px;
+export const OrangeExpress = styled.span`
+  font-family: 'Comfortaa', sans-serif;
+  color: #e8833a;
+  text-shadow: 2px 2px rgb(95, 95, 95);
+  margin-bottom: 60px;
   @media screen and (max-width: 450px) {
     margin-bottom: 0px;
   }
 `;
 
-export const IntroImage1 = styled.img`
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  border-radius: 50%;
-  width: 75%;
-  height: auto;
-  border: 2px solid #fff;
-  box-shadow: 0px 10px 6px #ccc;
-`;
-
-export const IntroImage2 = styled.img`
-  position: absolute;
-  left: 10px;
-  top: 200px;
-  border-radius: 50%;
-  width: 40%;
-  height: auto;
-  border: 2px solid #fff;
-  box-shadow: 0px 10px 6px #ccc;
-`;
-
-// ------------- Section Two ------------- //
+// --------------------- Section Two --------------------- //
 
 export const SectionTwo = styled.div`
   background-color: lightgray;
@@ -195,58 +241,18 @@ export const SectionTwo = styled.div`
   }
 `;
 
-// ------------- Section Three ------------- //
+// --------------------- Section Three --------------------- //
 
 export const SectionThree = styled.div`
   width: 50%;
   height: 100%;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   margin-right: 30px;
   @media screen and (max-width: 450px) {
     display: none;
-  }
-`;
-
-// ------------- Section Four ------------- //
-
-export const SectionFour = styled.div`
-  width: 50%;
-  height: 520px;
-  padding: 20px;
-  margin-top: 10px;
-  @media screen and (max-width: 450px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-    margin: 0px;
-    padding: 0px;
-    font-size: 1rem;
-  }
-`;
-
-export const GroomerImg = styled.img`
-  border-radius: 10px;
-  height: auto;
-  margin: auto;
-  width: 75%;
-`;
-
-export const GroomerText = styled.div`
-  @media screen and (max-width: 450px) {
-    font-size: 0.9rem;
-    margin-top: -10px;
-    margin-bottom: -20px;
-  }
-`;
-
-export const Spacing = styled.div`
-  margin-bottom: 5px;
-  @media screen and (max-width: 450px) {
-    margin-bottom: 2.5px;
   }
 `;
 
@@ -259,12 +265,6 @@ export const Caption = styled.div`
   font-weight: 500;
   text-align: center;
   font-style: italic;
-`;
-
-export const Poodle = styled.img`
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
 `;
 
 export const SpacingLeft = styled.div`
@@ -294,7 +294,72 @@ export const SpacingRight = styled.div`
   }
 `;
 
-// ------------- Footer ------------- //
+export const GroomerImg = styled.img`
+  border-radius: 10px;
+  height: auto;
+  margin: auto;
+  width: 75%;
+`;
+
+// --------------------- Section Four --------------------- //
+
+export const SectionFour = styled.div`
+  width: 50%;
+  height: 520px;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+
+  @media screen and (max-width: 450px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+  }
+`;
+
+export const SectionFourContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const BottomSection = styled.div`
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  margin-top: 15px;
+  height: 100%;
+  @media screen and (max-width: 450px) {
+    width: 90%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    height: 550px;
+  }
+`;
+
+export const GroomerText = styled.div`
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: -20px;
+  }
+`;
+
+export const Poodle = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+`;
+
+// --------------------- Footer --------------------- //
 
 export const Footer = styled.footer`
   border-top: 10px solid #f3c19d;
@@ -333,6 +398,13 @@ export const FooterTitles = styled.span`
   @media screen and (max-width: 450px) {
     font-size: 1rem;
     margin-top: 15px;
+  }
+`;
+
+export const Spacing = styled.div`
+  margin-bottom: 5px;
+  @media screen and (max-width: 450px) {
+    margin-bottom: 2.5px;
   }
 `;
 

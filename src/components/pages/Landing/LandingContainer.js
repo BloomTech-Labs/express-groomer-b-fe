@@ -1,20 +1,22 @@
 import React from 'react';
 import {
   Container,
+  IntroContainer,
   Title,
   SecondTitle,
   SectionOne,
-  SectionTwo,
   SectionThree,
   SectionFour,
-  IntroImage1,
-  IntroImage2,
+  SectionFourContainer,
   Section,
+  BottomSection,
   Row,
   HiddenRow,
   CenterDiv,
+  IntroMediumPara,
+  IntroSecondTitle,
   MediumPara,
-  BlueExpress,
+  OrangeExpress,
   Footer,
   LogoContainer,
   SocialContainer,
@@ -25,47 +27,41 @@ import {
   GroomerImg,
   GroomerText,
   Spacing,
-  Caption,
   Poodle,
-  SpacingLeft,
-  SpacingRight,
+  DiagramIconContainer,
+  GrayIcons,
+  OrangeIcons,
 } from '../../../styles/Styles';
 
 const LandingContainer = () => {
   return (
     <div>
-      <Container className={'container'}>
+      <IntroContainer>
         <Section>
-          <Title>
-            <BlueExpress>Express Groomer</BlueExpress>
-          </Title>
           <CenterDiv>
             <SectionOne>
-              <SecondTitle>Get Clean, Faster</SecondTitle>
-              <MediumPara>
+              <Title>
+                <OrangeExpress>Express Groomer</OrangeExpress>
+              </Title>
+              <IntroSecondTitle>Get Clean, Faster</IntroSecondTitle>
+              <IntroMediumPara>
                 With Express Groomer you are your own boss. Whether you're a pet
                 owner looking for a squeaky clean pet or a Groomer looking to
                 add more clients to your business. Your Schedule: Your Rules.
-              </MediumPara>
-              <div>Changing the way you Groom.</div>
+              </IntroMediumPara>
+              <IntroMediumPara>
+                Let's face it. Our pets are entitled to the very best care we
+                can provide for them. Express Groomer gives you and your beloved
+                pet the power to select a professional who is right for you.
+              </IntroMediumPara>
             </SectionOne>
-            <SectionTwo>
-              <IntroImage1
-                src={require('./images/golden-bath.jpg')}
-                alt="golden retriever"
-              ></IntroImage1>
-              <IntroImage2
-                src={require('./images/shortcoat-smile.jpg')}
-                alt="shortcoat dog"
-              ></IntroImage2>
-            </SectionTwo>
           </CenterDiv>
         </Section>
-      </Container>
+      </IntroContainer>
 
-      <Container className={'container'}>
+      <Container>
         <Section>
-          <SpacingLeft>Spend less time on grooming...</SpacingLeft>
+          {/* <SpacingLeft>Spend less time on grooming...</SpacingLeft> */}
           <CenterDiv>
             <Row>
               <SecondTitle>Why Wait?</SecondTitle>
@@ -102,52 +98,56 @@ const LandingContainer = () => {
               </div>
             </HiddenRow>
           </CenterDiv>
-          <SpacingRight>...and more time with your pets</SpacingRight>
+          {/* <SpacingRight>...and more time with your pets</SpacingRight> */}
         </Section>
       </Container>
 
-      <Container className={'container'}>
-        <Section>
+      <SectionFourContainer>
+        <BottomSection>
           <CenterDiv>
             <SectionThree>
               <GroomerImg
-                src={require('./images/groomer.jpg')}
+                src={require('./images/brown_dog_gaze.jpg')}
                 alt="groomer"
               ></GroomerImg>
-              <Caption>
-                All of our Groomers are state certified and licensed, so you
-                know your pets are in good hands.
-              </Caption>
             </SectionThree>
 
             <SectionFour>
-              <SecondTitle>We Love Groomers</SecondTitle>
+              <SecondTitle>You and your beloved pet</SecondTitle>
               <MediumPara>
                 Whether you're looking to get extra income or start a Freelance
                 career, turn your passion for pets into extra income!
               </MediumPara>
               <GroomerText>
-                <ul>
-                  <li>Make your own hours</li>
-                  <li>Schedule at your convience</li>
-                  <li>Work as little or as much as you like</li>
-                  <li>You decide which appointments to accept</li>
-                  <li>
-                    Our client rating system lets you pick the clients right for
-                    you
-                  </li>
-                </ul>
+                <DiagramIconContainer>
+                  <GrayIcons>
+                    <div className="fa fa-dog"></div>
+                  </GrayIcons>
+                  <OrangeIcons>
+                    <div className="fa fa-long-arrow-alt-right"></div>
+                  </OrangeIcons>
+                  <GrayIcons>
+                    <div className="fa fa-shower"></div>
+                  </GrayIcons>
+                  <OrangeIcons>
+                    <div className="fa fa-long-arrow-alt-right"></div>
+                  </OrangeIcons>
+                  <GrayIcons>
+                    <div className="fa fa-magic"></div>
+                  </GrayIcons>
+                </DiagramIconContainer>
                 <br></br>
-                <p>
+                <SecondTitle>Local, professional groomers</SecondTitle>
+                <MediumPara>
                   Becoming a Groomer with Express Groomer is Easy! Just upload a
                   copy of your Groomer's License and ID and one of our
                   representitives will reach out for a brief chat.
-                </p>
+                </MediumPara>
               </GroomerText>
             </SectionFour>
           </CenterDiv>
-        </Section>
-      </Container>
+        </BottomSection>
+      </SectionFourContainer>
 
       <Footer className={'footer'}>
         <LogoContainer>
