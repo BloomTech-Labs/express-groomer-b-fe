@@ -16,6 +16,15 @@ const GroomersProvider = ({ children }) => {
   const [updated, setUpdated] = useState(false);
   const [servicesUpdated, setServicesUpdated] = useState(false);
 
+  // context state for TwilioForm Component
+  const twilioState = {
+    to: '',
+    body: '',
+  };
+  const [twilioGroomer, setTwilioGroomer] = useState(twilioState);
+  // form validation state for TwilioForm Comopnent
+  const [validateForm, setValidateForm] = useState(twilioState);
+
   // context state
   const { userInfo } = useContext(UsersContext);
   const { deleteProfile } = useContext(APIContext);
@@ -183,6 +192,10 @@ const GroomersProvider = ({ children }) => {
         updateCloseHours,
         updateOpenHours,
         deleteGroomerProfile,
+        twilioGroomer,
+        setTwilioGroomer,
+        validateForm,
+        setValidateForm,
       }}
     >
       {children}

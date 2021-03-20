@@ -39,6 +39,8 @@ function NavBar() {
       .then(info => {
         if (isSubscribed) {
           setUserInfo(info);
+          console.log(info.name); //added
+          console.log(info.email); //added
         }
         return getUserID(
           `${process.env.REACT_APP_API_URI}/profiles/${info.sub}`,

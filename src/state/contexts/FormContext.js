@@ -17,6 +17,10 @@ const FormProvider = ({ children }) => {
   const [resultInfo, setResultInfo] = useState({ message: null, type: null });
   //for delete modal
   const [showDelete, setShowDelete] = useState(false);
+  //for submitting in TwilioForm Component
+  const [twilioSubmit, setTwilioSubmit] = useState(false);
+  //for response error API with TwilioForm
+  const [twilioError, setTwilioError] = useState(false);
   // functions
   const toggleForm = () => {
     setShowForm(!showForm);
@@ -65,6 +69,10 @@ const FormProvider = ({ children }) => {
         onFailed,
         onPetFormFinishFailed,
         onRadioChange,
+        twilioSubmit,
+        setTwilioSubmit,
+        twilioError,
+        setTwilioError,
       }}
     >
       {children}
