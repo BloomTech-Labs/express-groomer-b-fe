@@ -26,6 +26,7 @@ import {
   LogoContainer,
   SocialContainer,
   Logo,
+  Caption,
   FooterTitles,
   FooterSect,
   Copyright,
@@ -109,28 +110,37 @@ const LandingContainer = () => {
       <SectionThreeContainer>
         <SectionThree>
           <SecondTitle>Your pet's custom tailored solutions</SecondTitle>
-          <MediumPara>
-            Whether you're looking to get extra income or start a Freelance
-            career, turn your passion for pets into extra income!
-          </MediumPara>
           <GroomerText>
             <SectionThreeDiagramIconContainer>
               <GrayIcons>
-                <div className="fa fa-dog"></div>
+                <div className="fa fa-list-ul"></div>
+                <Caption>
+                  <div>Search for a local groomer</div>
+                </Caption>
               </GrayIcons>
               <GrayIcons>
-                <div className="fa fa-shower"></div>
+                <div className="fa fa-route"></div>
+                <Caption>
+                  <div>Arrange a meeting</div>
+                </Caption>
               </GrayIcons>
               <GrayIcons>
                 <div className="fa fa-magic"></div>
+                <Caption>
+                  <div>Let the magic happen</div>
+                </Caption>
               </GrayIcons>
             </SectionThreeDiagramIconContainer>
             <br></br>
-            <SecondTitle>Local, professional groomers</SecondTitle>
             <MediumPara>
-              Becoming a Groomer with Express Groomer is Easy! Just upload a
-              copy of your Groomer's License and ID and one of our
-              representitives will reach out for a brief chat.
+              Stop searching for groomers on random platforms. Express groomer
+              does the heavy lifting, so you don't have to! We give you the
+              tools to search for the groomer that best meets your dog's needs
+              and preferences, so you get the best experience possible.
+            </MediumPara>
+            <MediumPara>
+              Need a groomer that specializes in sensitve skin products? Long
+              hair? Anxiety? We have you covered.
             </MediumPara>
           </GroomerText>
         </SectionThree>

@@ -55,6 +55,7 @@ export const SecondTitle = styled.div`
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   color: #e8833a;
+  margin-bottom: 30px;
   @media screen and (max-width: 450px) {
     font-size: 1.25rem;
     margin: 5px;
@@ -279,15 +280,13 @@ export const SectionThreeImg = styled.div`
 
 export const SectionThreeDiagramIconContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
 `;
 
 export const Caption = styled.div`
-  width: 60%;
-  margin: 15px;
-  margin-left: 20%;
-  margin-right: 0 auto;
+  font-size: 1rem;
+  margin: 40px 0px 40px 0px;
   color: gray;
   font-weight: 500;
   text-align: center;
