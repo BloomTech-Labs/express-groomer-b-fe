@@ -32,7 +32,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  margin-top: 50px;
+  margin-top: 200px;
   margin-bottom: 50px;
   width: 100%;
   height: 100%;
@@ -128,12 +128,6 @@ export const HiddenRow = styled.div`
   @media screen and (max-width: 450px) {
     display: none;
   }
-`;
-
-export const DiagramIconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
 `;
 
 export const OrangeIcons = styled.div`
@@ -243,17 +237,50 @@ export const SectionTwo = styled.div`
 
 // --------------------- Section Three --------------------- //
 
+export const SectionThreeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 250px;
+  /* padding: 20px; */
+  width: 100%;
+  height: 100%;
+`;
+
 export const SectionThree = styled.div`
-  width: 50%;
+  width: 40%;
+  height: 520px;
+  margin-top: 20px;
+  text-align: center;
+
+  @media screen and (max-width: 450px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+  }
+`;
+
+export const SectionThreeImg = styled.div`
+  width: 40%;
   height: 100%;
   padding: 20px 20px 0px 20px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
   @media screen and (max-width: 450px) {
     display: none;
   }
+`;
+
+export const SectionThreeDiagramIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
 `;
 
 export const Caption = styled.div`
@@ -303,6 +330,16 @@ export const GroomerImg = styled.img`
 
 // --------------------- Section Four --------------------- //
 
+export const SectionFourContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+`;
+
 export const SectionFour = styled.div`
   width: 50%;
   height: 520px;
@@ -321,14 +358,23 @@ export const SectionFour = styled.div`
   }
 `;
 
-export const SectionFourContainer = styled.div`
+export const SectionFourImg = styled.div`
+  width: 50%;
+  height: 100%;
+  padding: 20px 20px 0px 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+`;
+
+export const SectionFourDiagramIconContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  margin-top: 50px;
-  width: 100%;
-  height: 100%;
+  align-content: center;
 `;
 
 export const BottomSection = styled.div`

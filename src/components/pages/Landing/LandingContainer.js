@@ -4,11 +4,16 @@ import {
   IntroContainer,
   Title,
   SecondTitle,
+  Section,
   SectionOne,
   SectionThree,
   SectionFour,
+  SectionThreeContainer,
+  SectionThreeImg,
   SectionFourContainer,
-  Section,
+  SectionFourImg,
+  SectionFourDiagramIconContainer,
+  SectionThreeDiagramIconContainer,
   BottomSection,
   Row,
   HiddenRow,
@@ -28,7 +33,6 @@ import {
   GroomerText,
   Spacing,
   Poodle,
-  DiagramIconContainer,
   GrayIcons,
   OrangeIcons,
 } from '../../../styles/Styles';
@@ -79,7 +83,7 @@ const LandingContainer = () => {
 
             <HiddenRow>
               <Poodle
-                src={require('./images/poodle.jpg')}
+                src={require('./images/dog_with_book.jpg')}
                 alt="poodle"
               ></Poodle>
             </HiddenRow>
@@ -102,15 +106,52 @@ const LandingContainer = () => {
         </Section>
       </Container>
 
+      <SectionThreeContainer>
+        <SectionThree>
+          <SecondTitle>Your pet's custom tailored solutions</SecondTitle>
+          <MediumPara>
+            Whether you're looking to get extra income or start a Freelance
+            career, turn your passion for pets into extra income!
+          </MediumPara>
+          <GroomerText>
+            <SectionThreeDiagramIconContainer>
+              <GrayIcons>
+                <div className="fa fa-dog"></div>
+              </GrayIcons>
+              <GrayIcons>
+                <div className="fa fa-shower"></div>
+              </GrayIcons>
+              <GrayIcons>
+                <div className="fa fa-magic"></div>
+              </GrayIcons>
+            </SectionThreeDiagramIconContainer>
+            <br></br>
+            <SecondTitle>Local, professional groomers</SecondTitle>
+            <MediumPara>
+              Becoming a Groomer with Express Groomer is Easy! Just upload a
+              copy of your Groomer's License and ID and one of our
+              representitives will reach out for a brief chat.
+            </MediumPara>
+          </GroomerText>
+        </SectionThree>
+
+        <SectionThreeImg>
+          <GroomerImg
+            src={require('./images/shibe_ponder_crop.jpg')}
+            alt="groomer"
+          ></GroomerImg>
+        </SectionThreeImg>
+      </SectionThreeContainer>
+
       <SectionFourContainer>
         <BottomSection>
           <CenterDiv>
-            <SectionThree>
+            <SectionFourImg>
               <GroomerImg
                 src={require('./images/brown_dog_gaze.jpg')}
                 alt="groomer"
               ></GroomerImg>
-            </SectionThree>
+            </SectionFourImg>
 
             <SectionFour>
               <SecondTitle>You and your beloved pet</SecondTitle>
@@ -119,7 +160,7 @@ const LandingContainer = () => {
                 career, turn your passion for pets into extra income!
               </MediumPara>
               <GroomerText>
-                <DiagramIconContainer>
+                <SectionFourDiagramIconContainer>
                   <GrayIcons>
                     <div className="fa fa-dog"></div>
                   </GrayIcons>
@@ -135,7 +176,7 @@ const LandingContainer = () => {
                   <GrayIcons>
                     <div className="fa fa-magic"></div>
                   </GrayIcons>
-                </DiagramIconContainer>
+                </SectionFourDiagramIconContainer>
                 <br></br>
                 <SecondTitle>Local, professional groomers</SecondTitle>
                 <MediumPara>
