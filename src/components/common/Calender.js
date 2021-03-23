@@ -1,7 +1,12 @@
 import { Calendar, Badge } from 'antd';
-import React from 'react';
+import React, { useContext } from 'react';
+// import { CustomersContext } from '../../state/contexts/CustomersContext';
 
 const AppointmentCalendar = ({ msg }) => {
+
+  // Need to comment this out just until we hook it up because its making the code fail to commit
+  // const {appointment, setAppointment} = useContext(CustomersContext);
+
   function getListData(value) {
     let listData;
     switch (value.date()) {
