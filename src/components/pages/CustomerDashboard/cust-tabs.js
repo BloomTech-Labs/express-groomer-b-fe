@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Overview from './overview';
 import CustomerProfilePage from '../CustomerProfile/CustProContainer';
 import { ProfileFormPO } from '../ProfileFormPO';
-import { PetForm } from '../PetForm';
+import PetFormRender from '../PetForm/index';
 // context imports
 import { FormContext } from '../../../state/contexts/FormContext';
 import FileUpload from '../../common/FileUpload';
@@ -83,7 +83,7 @@ const CustTab = () => {
           {/* Pet form is placed inside a row component for easy center
           alignment*/}
           <Row justify={'center'}>
-            <PetForm />
+            <PetFormRender />
           </Row>
           {/* These 2 components will eventually live on pet display
           component*/}
