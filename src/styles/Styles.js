@@ -496,3 +496,7 @@ export const Copyright = styled.div`
     font-size: 0.75rem;
   }
 `;
+
+// export const Tabs = styled.div`
+//   color: black;
+// `;

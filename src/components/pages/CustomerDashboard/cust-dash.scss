@@ -10,13 +10,27 @@
 }
 .dashboard {
     text-align: center;
-    color:white;
+    color:rgb(97, 97, 97) !important;
     font-size: 40px;
     margin-left: 25%;
     margin-bottom: 5%;
     margin-top: 3%;
 }
 .ant-tabs-tab {
-    color: #ffffff !important;
+    color: black !important;
     font-size: 28px !important;
+  }
+
+  .ant-tabs-tab-btn {
+      color: rgb(153, 153, 153) !important;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: #e8833a !important;
+  }
+
+  .ant-btn-primary {
+    background-color: #e8833a !important;
+    border-color: #e8833a !important;
+    color: black !important;
   }
