@@ -3,7 +3,8 @@ import { SearchResults } from '../SearchResults/SearchResultsCard';
 import NoResults from '../SearchResults/NoResults';
 import 'antd/dist/antd.css';
 import './search.scss';
-import { Button, Col, Input, Row } from 'antd';
+import { Col, Input, Row } from 'antd';
+import { Button } from '../../../styles/Styles';
 // context imports
 import { GroomersContext } from '../../../state/contexts/GroomersContext';
 import { APIContext } from '../../../state/contexts/APIContext';
@@ -56,7 +57,7 @@ const Searching = () => {
       </Row>
       <Row justify={'center'} className={'map-button'}>
         <Col>
-          <Button type={'primary'} onClick={() => history.push('/groomer-map')}>
+          <Button onClick={() => history.push('/groomer-map')}>
             Find Groomers Near Me
           </Button>
         </Col>

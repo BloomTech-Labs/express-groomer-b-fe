@@ -6,18 +6,18 @@ import img from '../components/pages/Landing/images/dog_bed.jpg';
  ******************************************************************************/
 
 export const Button = styled.button`
-  background-color: white;
-  color: #1ea7fd;
+  background-color: #e8833a;
+  color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   width: 170px;
 
   :hover {
-    background-color: #1ea7fd;
-    color: white;
+    background-color: #f8a66c;
+    transition-duration: 500ms;
   }
 `;
 
@@ -496,3 +496,7 @@ export const Copyright = styled.div`
     font-size: 0.75rem;
   }
 `;
+
+// export const Tabs = styled.div`
+//   color: black;
+// `;

@@ -35,6 +35,10 @@ h2 {
 
 .sms-form button {
   font-size: 1.4em;
+  background-color: #e8833a;
+  border: 1px solid #e8833a;
+  border-radius: 4px;
+  color: black;
 }
 
 .validate-form {
@@ -48,3 +52,11 @@ h2 {
   border: solid 1px #f39595;
   border-radius: 4px;
 }
+
+.btn-primary:hover {
+  background-color: #f8a66c;
+  border: 1px solid #f8a66c;
+  border-radius: 4px;
+  color: black;
+  transition-duration: 500ms;
+} 
