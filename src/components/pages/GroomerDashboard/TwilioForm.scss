@@ -41,10 +41,22 @@ h2 {
   color: black;
 }
 
+.validate-form {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.catch-error {
+  background-color: #ffb7b7;
+  color: red;
+  border: solid 1px #f39595;
+  border-radius: 4px;
+}
+
 .btn-primary:hover {
   background-color: #f8a66c;
   border: 1px solid #f8a66c;
   border-radius: 4px;
   color: black;
   transition-duration: 500ms;
-}
+} 

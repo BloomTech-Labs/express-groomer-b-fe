@@ -20,6 +20,14 @@ const CustomersProvider = ({ children }) => {
     deleteProfile(authState, 'customers', userInfo, history, setResultInfo);
   };
 
+  // context state for appointments component
+  const appointmentsState = {
+    id: '',
+    date: '',
+    time: '',
+  };
+  const [appointment, setAppointment] = useState(appointmentsState);
+
   return (
     <CustomersContext.Provider
       value={{
@@ -28,6 +36,8 @@ const CustomersProvider = ({ children }) => {
         updated,
         setUpdated,
         deleteCustomerProfile,
+        appointment,
+        setAppointment,
       }}
     >
       {children}

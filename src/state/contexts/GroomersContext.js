@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+ import React, { createContext, useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 // context imports
 import { UsersContext } from './UsersContext';
@@ -15,6 +15,15 @@ const GroomersProvider = ({ children }) => {
   const [groomerServices, setGroomerServices] = useState([]);
   const [updated, setUpdated] = useState(false);
   const [servicesUpdated, setServicesUpdated] = useState(false);
+
+  // context state for TwilioForm Component
+  const twilioState = {
+    to: '',
+    body: '',
+  };
+  const [twilioGroomer, setTwilioGroomer] = useState(twilioState);
+  // form validation state for TwilioForm Comopnent
+  const [validateForm, setValidateForm] = useState(twilioState);
 
   // context state
   const { userInfo } = useContext(UsersContext);
@@ -183,6 +192,10 @@ const GroomersProvider = ({ children }) => {
         updateCloseHours,
         updateOpenHours,
         deleteGroomerProfile,
+        twilioGroomer,
+        setTwilioGroomer,
+        validateForm,
+        setValidateForm,
       }}
     >
       {children}
