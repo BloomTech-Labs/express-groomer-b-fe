@@ -105,12 +105,15 @@ This part of the roadmap includes several 'features'
    - Calendly has been integrated through the react-calendly library.  Currently the groomer must create a personal Calendly account and provide the link.  
    - Temporary emails were used to create Calendly accounts for the current four groomers and new ones may need to be made. Perhaps through the 'emails' provided with each of the eight users (through Okta) provided in labs.
    - The integration is visible on the customer facing groomer profile page where there is a 'make appointment' button and then Calendly comes up and a type of service, date, and time can be selected.
+   - Twilio API is integrated as a way of communication between the groomer, and their customers.  Groomer can send text messages to customers to remind them about their appointments. On the Groomer Dashboard, groomer will click on the Appointments Tab, and there will be a SMS Form where the groomer will type first in the "To" Input, the customer phone number, and in the "Body" Text Area will type a reminder text as "Hi, Alex. This is a reminder for your pet groomer appointment on 3/05/21 at 3PM. Reply NO to cancel or to reschedule your Appointment. Reply CANCEL to unsubscribe". Later the text message will be submitted by clicking on the "Send Message" Button. The SMS Form has a validation Form Schema implemented by YUP, and it will show errors messages if the input "To" dont have numbers and special characters only, and/or its input is left empty.  Also, the Text Area "Body" will have an error message if it is left empty too.
+
+
 
 * **Future Features/Thoughts:**
 
     `Accessing the Calendly for the groomer is currently only available on the customer facing groomer profile page. A close look at the available Calendly integration options looks like it can be further embedded into the application and perhaps appointment data can be pulled to display within the Groomer Dashboard. If Calendly is not viable, other scheduling options may need to be considered.`
 
-    `Integrating SendGrid and/or Twilio to provide confirmation of appointments and reminders would be the next feature to implement.  Also, upon confirmation of an appointment, perhaps an email could provide the Groomer with the customer's contact information and pet information.`
+    `Integrating SendGrid to provide confirmation of appointments and reminders would be the next feature to implement.  Also, upon confirmation of an appointment, perhaps an email could provide the Groomer with the customer's contact information and pet information.`
 
 <br>
 
@@ -139,6 +142,9 @@ This part of the roadmap includes several 'features'
 - Axios
 - MapBox via [react-map-gl](https://visgl.github.io/react-map-gl/)
 - Twilio API for [SMS notifications](https://www.twilio.com/sms)
+- Twilio Setup Free Account [Setup](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account#sending-sms-and-mms-messages)
+- Twilio Studio [Send-Wait-Reply](https://www.twilio.com/docs/studio/tutorials/how-to-send-appointment-reminders#split-based-on-reply)
+- YUP - Form Validation
 - Styled Components
 - Less (Installed with AntDesign)
 - Front end deployed to [`AWS Amplify`](https://b.expressgroomer.dev)
