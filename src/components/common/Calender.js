@@ -1,40 +1,31 @@
-import { Calendar, Badge } from 'antd';
-import React, { useContext } from 'react';
-// import { CustomersContext } from '../../state/contexts/CustomersContext';
+import { Calendar, Badge, Modal } from 'antd';
+import React, { useState, useEffect, useContext } from 'react';
+import { APIContext } from '../../state/contexts/APIContext';
+import { useOktaAuth } from '@okta/okta-react';
+import './calendar.scss';
 
 const AppointmentCalendar = ({ msg }) => {
+  const [apptsToRender, setApptsToRender] = useState();
+  const [apptsForSelectedDate, setApptsForSelectedDate] = useState();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const { getAllAppointments, deleteAppointment } = useContext(APIContext);
+  const { authState } = useOktaAuth();
 
-  // Need to comment this out just until we hook it up because its making the code fail to commit
-  // const {appointment, setAppointment} = useContext(CustomersContext);
+  useEffect(() => {
+    getAllAppointments(authState).then(res => {
+      setApptsToRender(res.data);
+    });
+  }, []);
 
   function getListData(value) {
-    let listData;
-    switch (value.date()) {
-      case 8:
-        listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
-        ];
-        break;
-      case 10:
-        listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
-          { type: 'error', content: 'This is error event.' },
-        ];
-        break;
-      case 15:
-        listData = [
-          { type: 'warning', content: 'This is warning event' },
-          { type: 'success', content: 'This is very long usual event。。....' },
-          { type: 'error', content: 'This is error event 1.' },
-          { type: 'error', content: 'This is error event 2.' },
-          { type: 'error', content: 'This is error event 3.' },
-          { type: 'error', content: 'This is error event 4.' },
-        ];
-        break;
-      default:
+    //state of appts filtered to match value
+    let listData = [];
+    for (let i = 0; i < apptsToRender.length; i++) {
+      if (new Date(apptsToRender[i].date).getDate() === value.date()) {
+        listData.push(apptsToRender[i]);
+      }
     }
+
     return listData || [];
   }
 
@@ -43,13 +34,30 @@ const AppointmentCalendar = ({ msg }) => {
     return (
       <ul className="events">
         {listData.map(item => (
-          <li key={item.content}>
-            <Badge status={item.type} text={item.content} />
+          <li key={item.apptId}>
+            <Badge status={'default'} text={item.time} />
           </li>
         ))}
       </ul>
     );
   }
+
+  function onDateClickHandler(value) {
+    const appts = apptsToRender.filter(
+      appt => new Date(appt.date).getDate() === value.date()
+    );
+    setApptsForSelectedDate(appts);
+    setIsModalVisible(true);
+  }
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  const deleteClickHandler = appointmentId => {
+    deleteAppointment(appointmentId);
+    setIsModalVisible(false);
+  };
 
   function getMonthData(value) {
     if (value.month() === 8) {
@@ -66,32 +74,31 @@ const AppointmentCalendar = ({ msg }) => {
       </div>
     ) : null;
   }
-  return (
-    <Calendar
-      dateCellRender={dateCellRender}
-      monthCellRender={monthCellRender}
-    />
+  return apptsToRender ? (
+    <>
+      <Calendar
+        dateCellRender={dateCellRender}
+        monthCellRender={monthCellRender}
+        onSelect={onDateClickHandler}
+      ></Calendar>
+      <Modal
+        title="Appointments for Selected Date"
+        onCancel={handleCancel}
+        visible={isModalVisible}
+        footer={null}
+      >
+        {apptsForSelectedDate?.map(appt => (
+          <>
+            <p>{appt.time}</p>
+            <button onClick={e => deleteClickHandler(appt.id)}>delete</button>
+            <button>edit</button>
+          </>
+        ))}
+      </Modal>
+    </>
+  ) : (
+    <Calendar />
   );
 };
 
 export default AppointmentCalendar;
-
-// .events {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
-// .events .ant-badge-status {
-//   width: 100%;
-//   overflow: hidden;
-//   font-size: 12px;
-//   white-space: nowrap;
-//   text-overflow: ellipsis;
-// }
-// .notes-month {
-//   font-size: 28px;
-//   text-align: center;
-// }
-// .notes-month section {
-//   font-size: 28px;
-// }
