@@ -158,9 +158,9 @@ const APIProvider = ({ children }) => {
   //CUSTOMER/PET OWNER GET CALLS
   const getCustomerByID = authState => {
     const headers = getAuthHeader(authState);
-
+    console.log('test ', axios.baseURL);
     return axios
-      .get(`${process.env.REACT_APP_API_URI}/customers/`, {
+      .get(`http://localhost:8000/customers/`, {
         headers, // removed ${userInfo.sub} to display customer-dashboard
       })
       .then(res => {
@@ -350,6 +350,33 @@ const APIProvider = ({ children }) => {
       });
   };
 
+  /******************************************************************************
+   *                      API calls for appointments
+   ******************************************************************************/
+
+  const getAllAppointments = authState => {
+    const headers = getAuthHeader(authState);
+    console.log('header ', headers);
+    return axios.get(`http://localhost:8000/appointments`, {
+      headers,
+    });
+  };
+
+  const addAppointment = (authState, form) => {
+    const headers = getAuthHeader(authState);
+    console.log('test add appointment', form);
+    return axios.post(`http://localhost:8000/appointments`, form, {
+      headers,
+    });
+  };
+
+  const deleteAppointment = (authState, appointmentId) => {
+    const headers = getAuthHeader(authState);
+    return axios.delete(`http://localhost:8000/appointments`, appointmentId, {
+      headers,
+    });
+  };
+
   return (
     <APIContext.Provider
       value={{
@@ -372,6 +399,9 @@ const APIProvider = ({ children }) => {
         getServices,
         getLatLng,
         onSubmit,
+        getAllAppointments,
+        addAppointment,
+        deleteAppointment,
       }}
     >
       {children}
